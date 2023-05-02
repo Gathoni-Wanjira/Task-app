@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task App</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,21 +17,21 @@
 
             <div class="add-tasks">
                 <input type="text" placeholder="Add your task" id="input-box">
-                <button class="button">Add</button>
+                <button class="button" onclick="addTask()">Add</button>
             </div>
 
 
             <div class="lists">
-            <ul>
+            <ul id="list-container">
                 <!-- <li class="checked">Go to the gym</li>
                 <li>Do grocery shopping</li>
-                <li>Visit the fragrance store</li>
-            </ul> -->
+                <li>Visit the fragrance store</li>  -->
+            </ul> 
         </div>
         
         </div>
     </div>
 
-    
+    <script src="./script.js"></script>
 </body>
 </html>
