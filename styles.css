@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* The whole phase in blue */
 .container{
     width: 100%;
     min-height: 100vh;
@@ -12,6 +13,7 @@
     padding: 10px;
 }
 
+/* The specific app space in white  */
 .todo-app{
     background: #fff;
     margin: 100px auto 20px;
@@ -61,9 +63,11 @@
     padding: 10px;
     color: #0B2447;
     
+    
 
 }
 
+/* Add tasks button */
 .add-tasks button{
     padding: 16px 30px;
     color: #fff;
@@ -76,7 +80,7 @@
 
 }
 
-
+/* Adding lists of tasks */
 .lists{
     padding-top: 30px;
    
@@ -113,8 +117,26 @@
 
 .lists ul li.checked::before{
     background-image: url(/images/checked.png);
-    
+
 
 
 }
 
+/* Styling the close icon */
+.lists ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.lists ul li span:hover{
+    background: #edeef0;
+
+}
