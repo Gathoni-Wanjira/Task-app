@@ -20,6 +20,8 @@ function addTask(){
     }
     // The below instruction is used to clear the input box after adding a task
     inputBox.value = "";
+    // Whenever we will add any task it will be saved in the browser while we close the page.
+    saveData();
 
 }
 
@@ -28,12 +30,27 @@ function addTask(){
 listContainer.addEventListener("click", function(e) {
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
+        saveData();
     }
     else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
+        saveData();
 
     }
 
 }, false);
 
+
+// Adding local storage to store the tasks
+
+function saveData (){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+// The function below is used to show the tasks stored in the browser after refreshing it.
+
+function showTasks(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+showTasks();
 
